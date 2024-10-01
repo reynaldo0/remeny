@@ -64,7 +64,7 @@ export const Navbar = () => {
                 <ul className="block lg:flex">
                   <li className="group">
                     <a
-                      href="#home"
+                      href="#solar"
                       className="mx-5 flex py-2 font-poppins text-base text-white md:text-black group-hover:text-primary"
                     >
                       Solar Panel
@@ -72,7 +72,7 @@ export const Navbar = () => {
                   </li>
                   <li className="group">
                     <a
-                      href="#about"
+                      href="#elevator"
                       className="mx-5 flex py-2 font-poppins text-base text-white md:text-black group-hover:text-primary"
                     >
                       Elevator
@@ -80,7 +80,7 @@ export const Navbar = () => {
                   </li>
                   <li className="group">
                     <a
-                      href="#skills"
+                      href="#IoT"
                       className="mx-5 flex py-2 font-poppins text-base text-white md:text-black group-hover:text-primary"
                     >
                       IoT
