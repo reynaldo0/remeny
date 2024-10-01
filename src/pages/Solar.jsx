@@ -6,20 +6,20 @@ const gridOptions = {
   onGrid: {
     title: "On Grid",
     description:
-      "Maximize the power produced by the sun during the daytime and utilize electricity provided by the national grid at night.",
+      "Maximize the power produced by the sun during the daytime and",
     image: "https://sunenergy.id/cfind/source/images/homepage/ongrid-min.gif", // Example GIF URL
   },
   offGrid: {
     title: "Off Grid",
     description:
       "Utilize solar energy independently from the grid, perfect for remote areas.",
-    image: "https://media.giphy.com/media/l4FGuhzJb8Tt0oM3O/giphy.gif", // Example GIF URL
+    image: "https://sunenergy.id/cfind/source/images/homepage/ofgrid-min.gif", // Example GIF URL
   },
   hybrid: {
     title: "Hybrid",
     description:
       "Combine the benefits of both grid-tied and off-grid systems for maximum flexibility.",
-    image: "https://media.giphy.com/media/3o7TKIgG8NYYBiFZyM/giphy.gif", // Example GIF URL
+    image: "https://sunenergy.id/cfind/source/images/homepage/hybrids-min.gif", // Example GIF URL
   },
 };
 
@@ -49,7 +49,7 @@ const Solar = () => {
           </h1>
         </div>
 
-        <div className="text-left md:ml-20 flex-grow">
+        <div className="text-left md:ml-40 flex-grow">
           <div className="flex flex-row items-center mb-4 relative">
             {/* Render option buttons */}
             {Object.keys(gridOptions).map((option, index) => (
