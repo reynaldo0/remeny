@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar"
 import Home from "./pages/Home"
 import Solar from "./pages/Solar"
+import Map from "./pages/Map"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar/>
       <Home/>
       <Solar/>
+      <Map/>
     </>
   )
 }
