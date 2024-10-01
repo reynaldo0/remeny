@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export const Navbar = () => {
-  window.onscroll = () => {
-    const header = document.querySelector("header");
-    const fixedNav = header.offsetTop;
+  const [scrolling, setScrolling] = useState(false);
 
-    if (window.scrollY > fixedNav) {
-      header.classList.add("navbar-fixed");
-    } else {
-      header.classList.remove("navbar-fixed");
-    }
-  };
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleToggle = () => {
     const hamburger = document.getElementById("hamburger");
@@ -18,9 +26,14 @@ export const Navbar = () => {
     hamburger.classList.toggle("hamburger-active");
     navMenu.classList.toggle("hidden");
   };
+
   return (
     <>
-      <header className="absolute left-0 top-0 z-50 flex w-full items-center bg-white">
+      <header
+        className={`fixed left-0 top-0 z-[99999] w-full flex items-center transition-all duration-300 ${
+          scrolling ? "backdrop-blur-md bg-white/60" : "bg-white"
+        }`}
+      >
         <div className="container">
           <div className="relative flex items-center justify-between">
             <div className="px-4">
@@ -70,7 +83,7 @@ export const Navbar = () => {
                       href="#skills"
                       className="mx-5 flex py-2 font-poppins text-base text-white md:text-black group-hover:text-primary"
                     >
-                      IoT 
+                      IoT
                     </a>
                   </li>
                 </ul>
