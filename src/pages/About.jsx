@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="relative py-24 bg-green-50" id="about-us">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
-        <div className="lg:w-1/2 mb-8 lg:mb-0">
+        <div className="lg:w-1/2 mb-8 lg:mb-0 mx-5">
           <h1 className="text-green-800 font-bold text-lg">ABOUT SUN ENERGY</h1>
           <h2 className="text-gray-800 font-bold text-4xl mt-4">Indonesia's Leading Integrated Solar Developer Company</h2>
           <p className="text-gray-600 mt-4">

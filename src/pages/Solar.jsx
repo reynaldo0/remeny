@@ -53,10 +53,10 @@ const Solar = () => {
           <div className="flex flex-row items-center mb-4 relative">
             {/* Render option buttons */}
             {Object.keys(gridOptions).map((option, index) => (
-              <div key={option} className="flex items-center mr-20 relative">
+              <div key={option} className="flex items-center mr-10 md:mr-40 relative">
                 {/* Dot marker for active option */}
                 <div
-                  className={`w-3 h-3 rounded-full mt-10 ${
+                  className={`w-3 h-3 rounded-full mt-10 absolute ${
                     activeOption === option ? "bg-green-600" : "bg-gray-300"
                   }`}
                 ></div>
@@ -64,11 +64,11 @@ const Solar = () => {
                 {/* Line connecting the dots */}
                 {index < Object.keys(gridOptions).length - 1 && ( // Don't render line for the last item
                   <div
-                    className={`absolute h-1 mt-5 ${
+                    className={`absolute h-1 mt-5 w-[100px] md:w-[225px] ${
                       activeOption === option ? "bg-green-600" : "bg-gray-300"
                     }`}
                     style={{
-                      width: "150px", // Set the width of the line here
+                      
                       left: "10px", // Position the line to the right of the dot
                       top: "50%", // Center the line vertically
                       transform: "translateY(-50%)", // Adjust vertical alignment
@@ -79,7 +79,7 @@ const Solar = () => {
                 <span
                   className={`font-semibold cursor-pointer ${
                     activeOption === option ? "text-green-600" : "text-gray-600"
-                  } ml-2`} // Margin left for text
+                  } mr-2`} // Margin left for text
                   onClick={() => handleOptionChange(option)}
                 >
                   {gridOptions[option].title}
