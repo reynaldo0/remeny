@@ -31,7 +31,7 @@ const Solar = () => {
   };
 
   return (
-    <div className="bg-white flex flex-col items-center justify-center min-h-screen relative overflow-hidden">
+    <div className="bg-white flex flex-col items-center justify-center min-h-screen relative overflow-hidden max-w-screen-2xl mx-auto">
       {/* Display the image corresponding to the active option */}
       <img
         src={gridOptions[activeOption].image}
